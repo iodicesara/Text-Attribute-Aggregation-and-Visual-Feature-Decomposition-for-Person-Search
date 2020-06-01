@@ -10,7 +10,7 @@ def set_lr(epoch,optimizer,lr_att):
         lr = lr_att*0.01
     for g in optimizer.param_groups:
         g['lr'] = lr * g.get('lr_mult', 1)
-    print('decrease learning rate='+str(lr))
+    #  print('decrease learning rate='+str(lr))
 
 
 
@@ -24,7 +24,7 @@ def adjust_lr(epoch,optimizer,lr_reid):
         lr = lr_reid
     if epoch <= 120 and epoch > 70:
         lr = lr_reid / 10.0
-    print('warmup learning rate='+str(lr))
+    #  print('warmup learning rate='+str(lr))
 
     for g in optimizer.param_groups:
         g['lr'] = lr * g.get('lr_mult', 1)
