@@ -17,7 +17,7 @@ __imgreid_factory = {
 
 
 def get_names():
-    return list(__imgreid_factory.keys()) + list(__vidreid_factory.keys())
+    return list(__imgreid_factory.keys())
 
 
 def init_imgreid_dataset(name, **kwargs):
